@@ -1,0 +1,226 @@
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
+a { text-decoration: none; color: var(--text-color);}
+img { display: block;}
+
+:root {
+    --main-color: #1eca97;
+    --sub-color: #eeeeee;
+    --back-color: #fff;
+    --text-color: #333;
+    --container-width: 1200px;
+    --slide-width: 1200px;
+    --slide-height: 300px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+header { height: 100px;}
+#slides { height: var(--slide-height);}
+#contents { height: 200px;}
+footer { height: 100px;}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color:var(--main-color);
+}
+header .logo a {
+    display: block;
+    width: 200px;
+    height: 40px;
+}
+header .logo a img {
+    width: 100%;
+    height: 100%;
+}
+header nav.main {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+header nav ul li a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+header .main-menu {
+    display: flex;
+}
+header .main-menu li a {
+    color: #fff;
+    font-weight: 600;
+}
+header .main-menu li a:hover {
+    background-color: #333;
+}
+header nav.sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;   
+    display: none; 
+}
+header nav.sub .inner {
+    display: flex;
+    justify-content: end;
+    padding: 0 20px;
+    background-color: var(--sub-color);
+}
+header .sub-menu li a {
+    color: var(--main-color);
+}
+header .sub-menu li a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#slides {
+    width: var(--slide-width);
+    overflow: hidden;
+}
+.slide-container {
+    position: relative;
+    display: flex;    
+}
+
+#contents {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: 200px;
+}
+
+.board-tit a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+.notice-wrap .notice li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+    background-color: var(--back-color);
+}
+.notice-wrap .notice li a:hover {
+    filter: brightness(90%);
+}
+.notice-wrap .notice li:nth-of-type(odd) a {
+    background-color: var(--sub-color);
+} 
+.gallery-wrap .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc((100% - 300px) / 4);
+    width: 100%;
+    height: 160px;
+}
+.gallery-wrap .gallery li a img {
+    width: 100px;
+    height: 100px;
+}
+.banner-wrap a {
+    display: block;   
+}
+.banner-wrap a img {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-logo a {
+    display: block;
+    width: 200px;
+    height: 40px;    
+}
+footer .footer-logo a img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+footer .family select {
+    padding: 10px 10px;
+    background-color: #333;    
+    border-radius: 5px;
+    color: #fff;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+#modal .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+#modal .inner {    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+#modal .card {
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    background-color: var(--back-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    z-index: 2;
+}
+#modal .card h1 {
+    font-size: 24px;
+    color: var(--main-color);
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+#modal .card p {
+    padding: 20px 0;
+}
+#modal .card .btn-wrap {
+    display: flex;
+    justify-content: end;
+}
+#modal .card .btn-wrap button {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

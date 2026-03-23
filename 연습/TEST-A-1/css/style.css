@@ -1,0 +1,228 @@
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
+a { text-decoration: none; color: var(--text-color);}
+img { display: block; max-width: 100%;}
+
+:root {
+    --main-color: #e62052;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 1200px;
+    --slide-width: 1200px;
+    --slide-height: 300px;
+}
+
+body { 
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    margin:0 auto;
+}
+
+#slides { height: var(--slide-height);}
+#contents { height: 200px;}
+footer { height: 100px;}
+
+header {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    background-color: var(--main-color);
+}
+
+header .logo a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    background-color: #ccc;
+}
+header nav {
+    display: flex;
+}
+header nav .main-menu {
+    display: flex;
+}
+header nav .main-menu li {
+    width: 200px; 
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+header nav .main-menu li a {
+    display : block;      
+}
+header nav .main-menu > li > a {
+    color: #fff;
+}
+header nav .main-menu > li > a:hover {
+    background-color: #333;
+}
+header nav .sub-menu { display: none;}
+header nav .sub-menu li {
+    background-color: #fff;
+}
+header nav .sub-menu li a {    
+    font-size: 14px;
+    color: var(--main-color);
+}
+header nav .sub-menu li a:hover {
+    background-color:var(--main-color);
+    color: #fff;
+}
+
+#slides {
+    height: var(--slide-height);
+    overflow: hidden;
+}
+.slide-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.slide-container .slide {    
+    height: var(--slide-height);
+}
+
+#contents {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: 200px;
+}
+
+.tab-wrap .tab-menu {
+    display: flex;
+}
+.tab-wrap .tab-menu .menu-item > a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.tab-wrap .tab-menu .menu-item:hover > a,
+.tab-wrap .tab-menu .menu-item.active > a {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.tab-wrap .tab-content .list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+}
+.tab-wrap .tab-content .list li a {
+    background-color: var(--back-color);
+}
+.tab-wrap .tab-content .list li:nth-of-type(odd) a {
+    background-color: var(--sub-color);
+}
+.tab-wrap .tab-content .list li a:hover {
+    filter: brightness(90%);
+}
+.tab-wrap .tab-content .gall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc((100% - 300px) / 4);
+    height: 160px;
+}
+.tab-wrap .tab-content .gall li a img {  
+    width: 100px; 
+    height: 100px;   
+}
+
+.banner-wrap img {
+    width: 100%;
+    height: 200px;
+}
+.link-wrap img {
+    width: 100%;
+    height: 200px;
+}
+#content-gallery { display: none;}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-logo img {
+    width: 200px;
+    height: 40px;
+    filter: grayscale(100%);
+}
+footer .sns { 
+    display: flex;
+    gap: 10px;
+}
+footer .sns a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: #ccc;
+}
+
+#modal { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    z-index: 999;
+    display: none;
+}
+#modal .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+#modal .inner {
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal .card {
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    background-color: var(--back-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+#modal .card h1 {
+    font-size: 24px;
+    color: var(--main-color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#modal .card p {
+    padding: 20px 0;
+}
+#modal .card .btn-wrap {
+    display: flex;
+    justify-content: end;
+}
+#modal .card .btn-wrap button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
