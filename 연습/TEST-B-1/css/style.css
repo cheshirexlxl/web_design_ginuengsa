@@ -1,0 +1,218 @@
+:root {
+    --main-color: #b8251b;
+    --sub-color: #eee;
+    --back-color: #fff;
+    --text-color: #333;
+    --container-width: 1200px;
+    --slide-width: 1200px;
+    --slide-height: 300px;
+}
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
+a { text-decoration: none; color: var(--text-color);}
+img { display: block;}
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+header { height: 100px;}
+#slides { height: var(--slide-height);}
+#contents { height: 200px;}
+footer { height: 100px;}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--main-color);
+    z-index: 99;
+}
+header .logo a {
+    display: block;
+}
+header .logo img {
+    display: block;
+    width: 200px;
+}
+header nav li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+header nav li a {
+    display: block;
+}
+header .main-menu {
+    display: flex;
+}
+header .main-menu > li > a{
+    color: #fff;
+}
+header .main-menu > li > a:hover {
+    background-color: #333;
+}
+header .sub-menu {
+    display: none;  
+    height: calc(50px * 4);  
+    background-color: var(--sub-color);
+}
+header .sub-menu li a {
+    color: var(--main-color);
+}
+header .sub-menu li a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#slides {
+    overflow: hidden;
+}
+.slide-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+.slide-container .slide,
+.slide-container .slide img {    
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+#contents {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: 200px;
+}
+
+.tab-menu {
+    display: flex;
+}
+.tab-menu li a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.tab-menu li.active a,
+.tab-menu li a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.tab-content .notice li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 40px;
+    background-color: var(--back-color);
+}
+.tab-content .notice li:nth-of-type(odd) a {
+    background-color: var(--sub-color);
+}
+.tab-content .notice li a:hover {
+    filter: brightness(90%);
+}
+
+#content-gallery { display: none;}
+.tab-content .gallery {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc((100% - 300px) / 4);
+}
+
+.banner-wrap img,
+.link-wrap img { width: 100%;}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+footer .footer-logo img {
+    width: 200px;
+    filter: grayscale(100%);
+}
+footer .inner {
+    flex:1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+footer .fnb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+footer .fnb a:hover {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+#modal .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+#modal .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal .card {
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    background-color: var(--back-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+#modal .card h1 {
+    font-size: 24px;
+    color: var(--main-color);
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+#modal .card p {
+    padding: 20px 0;
+}
+#modal .card .btn-wrap {
+    display: flex;
+    justify-content: end;
+}
+#modal .card .btn-wrap button {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

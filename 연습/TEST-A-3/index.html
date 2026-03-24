@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원천문대</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="강원천문대 로고"></a>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">메인메뉴1</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴2</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴3</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴4</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="slides">
+            <div class="slide-container">
+                <div class="slide">
+                    <a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지 1"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/slide2.jpg" alt="슬라이드 이미지 2"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/slide3.jpg" alt="슬라이드 이미지 3"></a>
+                </div>
+            </div>
+        </section>
+        <section id="contents">
+            <div class="tab-wrap">
+                <ul class="tab-menu">
+                    <li class="menu-item active"><a href="#" id="btn-notice">공지사항</a></li>
+                    <li class="menu-item"><a href="#" id="btn-gallery">갤러리</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="content-notice">
+                        <ul class="notice">
+                            <li>
+                                <a href="#" class="btn-modal">
+                                    <span>공지사항 제목</span>
+                                    <span>2026.01.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>공지사항 제목</span>
+                                    <span>2026.01.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>공지사항 제목</span>
+                                    <span>2026.01.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>공지사항 제목</span>
+                                    <span>2026.01.01</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content-gallery">
+                        <ul class="gallery">
+                            <li><a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1"></a></li>
+                            <li><a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2"></a></li>
+                            <li><a href="#"><img src="images/g3.jpg" alt="갤러리 이미지3"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-wrap">
+                <a href="#"><img src="images/banner.jpg" alt="배너 이미지"></a>
+            </div>
+            <div class="link-wrap">
+                <a href="#"><img src="images/goto.jpg" alt="바로가기 이미지"></a>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-logo">
+                <a href="#"><img src="images/logo.png" alt="푸터로고"></a>
+            </div>
+            <div class="inner">
+                <ul class="menu">
+                    <li><a href="#">하단 메뉴1</a></li>
+                    <li><a href="#">하단 메뉴2</a></li>
+                    <li><a href="#">하단 메뉴3</a></li>
+                </ul>
+                <div class="copy"><p>Copyright ⓒ ALOHA CLASS. All Rights Reserved</p></div>
+            </div>
+        </footer>
+    </div> 
+    <div id="modal">
+        <div class="close bg"></div>
+        <div class="inner">
+            <div class="card">
+                <h1>레이어팝업 제목</h1>
+                <p>레이어팝업 내용</p>
+                <div class="btn-wrap">
+                    <button class="close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
