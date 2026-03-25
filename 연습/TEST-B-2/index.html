@@ -9,8 +9,9 @@
     <script src="script/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
+    
+    <header>
+        <div class="container header-wrap">
             <div class="logo">
                 <a href="#"><img src="images/logo.png" alt="대한투어 로고"></a>
             </div>
@@ -23,7 +24,7 @@
                 </ul>
             </nav>
             <nav class="sub">
-                <div class="inner">
+                <div class="container inner">
                     <ul class="sub-menu">
                         <li><a href="#">동남아/대만</a></li>
                         <li><a href="#">중국/홍콩</a></li>
@@ -47,7 +48,9 @@
                     </ul>
                 </div>
             </nav>
-        </header>
+        </div>
+    </header>
+    <div class="container">
         <section id="slides">
             <div class="slide-container">
                 <div class="slide">
@@ -65,10 +68,30 @@
             <div class="notice-wrap">
                 <div class="board-tit"><a href="#" id="">공지사항</a></div>
                 <ul class="notice">
-                    <li><a href="#" class="btn-modal">공지사항 제목</a></li>
-                    <li><a href="#">공지사항 제목</a></li>
-                    <li><a href="#">공지사항 제목</a></li>
-                    <li><a href="#">공지사항 제목</a></li>
+                    <li>
+                        <a href="#" class="btn-modal">
+                            <span>공지사항 제목</span>
+                            <span>2026.01.04</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>공지사항 제목</span>
+                            <span>2026.01.04</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>공지사항 제목</span>
+                            <span>2026.01.04</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>공지사항 제목</span>
+                            <span>2026.01.04</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="gallery-wrap">
@@ -83,7 +106,9 @@
                 <a href="#"><img src="images/goto.jpg" alt="바로가기 이미지"></a>
             </div>
         </section>
-        <footer>
+    </div>
+    <footer>
+        <div class="container footer-wrap">
             <div class="copy"><p>&copy; 2024 대한투어. All rights reserved.</p></div>
             <div class="inner">
                 <ul class="sns">
@@ -100,8 +125,9 @@
                     </select>
                 </div>
             </div>
-        </footer>
-    </div>  
+        </div>
+    </footer>
+    
     <div id="modal">
         <div class="close bg"></div>
         <div class="inner">

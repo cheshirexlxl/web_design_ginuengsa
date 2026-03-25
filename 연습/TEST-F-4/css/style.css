@@ -1,0 +1,123 @@
+@charset "utf-8";
+:root {
+    --main-color: #e31a40;
+    --sub-color: #eee;
+    --back-color: #fff;
+    --text-color: #333;
+    --container-width: 1340px;
+    --slide-width: 100vw;
+    --slide-height: 350px;
+}
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
+a { text-decoration: none; color: var(--text-color);}
+img { display: block;}
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+header .header-wrap { height: 100px;}
+#slides { height: var(--slide-height);}
+footer { height: 100px;}
+
+header { position: relative; z-index: 99;}
+header .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header .logo a img {
+    width: 190px;
+}
+
+header nav li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+header nav li a {
+    display: block;
+}
+header .header-wrap nav.main {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+header .header-wrap nav.main .main-menu {
+    display: flex;
+}
+header .header-wrap nav.main .main-menu li a {
+    font-size: 17px;
+    font-weight: 600;
+}
+header .header-wrap nav.main .main-menu li:hover a {
+    background-color: #333;
+    color: #fff;
+} 
+
+header nav.sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+}
+header nav.sub .inner {
+    display: flex;
+    justify-content: end;
+    padding: 0 20px;
+}
+header nav.sub .sub-menu li:hover a {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+#slides {
+    overflow: hidden;
+}
+.slide-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+#contents { 
+    position: relative;
+}
+
+.link-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+}
+.link-wrap nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 0 20px;
+    padding: 20px 0;
+}
+.banner-wrap {}
+.banner-wrap .inner {
+    display: flex;;
+}
+
+.board-wrap {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 40px;
+}
